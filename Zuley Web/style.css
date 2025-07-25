@@ -440,7 +440,8 @@ img { max-width: 100%; height: auto; }
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* El fondo por defecto se definirá de forma específica por icono si es necesario */
+  background-color: rgba(255, 255, 255, 0.1); /* Puedes eliminar esta línea si todos los iconos tendrán fondo negro por defecto */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
@@ -450,18 +451,38 @@ img { max-width: 100%; height: auto; }
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
-.redes-iconos a:nth-child(1):hover {
+/* ESTILOS ESPECÍFICOS PARA CADA ICONO */
+
+/* Para el icono de Instagram (primer icono) */
+.redes-iconos a:nth-child(1) {
+  background-color: #000; /* Fondo negro por defecto para Instagram */
+}
+
+.redes-iconos a:nth-child(1):hover { /* Mantener el efecto de hover de Instagram */
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-.redes-iconos a:nth-child(2):hover {
+/* Para el icono de Facebook (segundo icono) */
+.redes-iconos a:nth-child(2) {
+  background-color: #000; /* Fondo negro por defecto para Facebook */
+}
+
+.redes-iconos a:nth-child(2):hover { /* Mantener el efecto de hover de Facebook */
   background-color: #1877f2;
 }
 
-.redes-iconos a:nth-child(3):hover {
-  background-color: #000;
+/* Para el icono de TikTok (tercer icono, ya lo tienes así) */
+.redes-iconos a:nth-child(3) {
+  background-color: #000; /* Fondo por defecto negro para TikTok */
 }
 
+.redes-iconos a:nth-child(3):hover {
+  background-color: #EE1D52; /* Al pasar el ratón, cambia el fondo a rosa vibrante de TikTok */
+}
+
+.redes-iconos a:nth-child(3):hover svg {
+  fill: #25F4EE; /* El icono SVG se vuelve de color azul vibrante de TikTok */
+}
 .redes-iconos a svg {
   fill: #fff;
   width: 24px;
